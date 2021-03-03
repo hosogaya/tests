@@ -15,3 +15,12 @@ In this repository, I test c++ code and write which I have found.
 2. shared_prt<type> obj(new type)とすると，オブジェクト生成する
 3. 引数type *に対してshared_ptr<type>を送ることはできない
 4. shared_prt<type>をtype *にキャストできない
+5. 基本的にはクラスであるので，参照渡しをする必要がある．ポインタとして送っても変更が維持されない（deep copyされる）
+
+### enum
+1. classでtypedefすると，列挙型の中身も名前空間に含まれる．
+2. enum.cppを参照してください．
+
+### std::array
+1. 戻り値とする場合には参照を返すようにした方がよい（アセンブラのコードが短い）
+2. std::array<type, num>& Gethogehoge(){return hogehoge;}
